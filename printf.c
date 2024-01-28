@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _printf: A custom implementation of the printf
+ * _printf -  A custom implementation of the printf
  * function that handles the conversion specifiers 'c', 's', and '%'.
  * @format: The format string, which is composed of zero or more directives.
  * @...: The variable arguments.
@@ -38,39 +38,39 @@ int _printf(const char *format, ...)
 			format++;
 			switch (*format)
 			{
-				case 'c':
-					{
-						  char c = (char) va_arg(args, int);
+			case 'c':
+			{
+				char c = (char) va_arg(args, int);
 
-						  putchar(c);
-						  count++;
-						  break;
-					}
-				case 's':
-					{
-						char *s = va_arg(args, char *);
+				putchar(c);
+				count++;
+				break;
+			}
+			case 's':
+			{
+				char *s = va_arg(args, char *);
 
-						while (*s)
-						{
-							putchar(*s);
-							count++;
-							s++;
-						}
-						break;
-					}
-				case '%':
-					{
-						putchar('%');
-						count++;
-						break;
-					}
-				default:
-					{
-						putchar('%');
-						putchar(*format);
-						count += 2;
-						break;
-					}
+				while (*s)
+				{
+					putchar(*s);
+					count++;
+					s++;
+				}
+				break;
+			}
+			case '%':
+			{
+				putchar('%');
+				count++;
+				break;
+			}
+			default:
+			{
+				putchar('%');
+				putchar(*format);
+				count += 2;
+				break;
+			}
 			}
 			format++;
 		}
