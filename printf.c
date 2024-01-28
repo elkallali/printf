@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _printf -  A custom implementation of the printf
+ * _printf - A custom implementation of the printf
  * function that handles the conversion specifiers 'c', 's', and '%'.
  * @format: The format string, which is composed of zero or more directives.
  * @...: The variable arguments.
